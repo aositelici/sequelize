@@ -4,11 +4,6 @@ var db = require('./models/index');
 
 
 
-
-/*
-
-*/
-db.sequelize.sync({ force: true }).then(function() {
   db.Husband.create({name: 'michael', job: 'programmer'}).then(function (michael) {
       db.Wife.create({name: 'Lucy', job: 'teacher'}).then(function (lucy) {
           michael.setWife(lucy);
@@ -39,4 +34,3 @@ db.sequelize.sync({ force: true }).then(function() {
           });
       });
   });
-});

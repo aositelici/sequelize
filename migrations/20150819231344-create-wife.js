@@ -14,6 +14,9 @@ module.exports = {
       job: {
         type: Sequelize.STRING
       },
+      HusbandId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
